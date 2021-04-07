@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebGL Basics part 4</title>
+    <script src="fragment.js";></script>
+	<script src="vertices.js";></script>
+    <script src="wireframe.js";></script>
+	<script src="transformationmatrix.js";></script>	
+	<script src="draw.js";></script>
+  </head>
+
+  <body onload='start();'>
+    <h1>WebGL wireframe object</h1>
+       <canvas id='glcanvas' width=640 height=480 onclick='running = !running;'>
+       Your browser may not support HTML5
+    </canvas>
+    <p>
+      <div style='display:inline-block;'>RX:</div>
+      <div style='display:inline-block; width:1.5em;'id='ax'>0</div>
+      <div style='display:inline-block;'>
+        <select id='dx'>
+          <option>-2<option>-1<option selected="selected">0<option >+1<option>+2
+        </select>
+      </div>
+      <div style='display:inline-block;padding-left:0.3em;'>RY:</div>
+      <div style='display:inline-block; width:1.5em;'id='ay'>0</div>
+      <div style='display:inline-block;'>
+        <select id='dy'>
+          <option>-2<option>-1<option selected="selected">0<option>+1<option >+2
+        </select>
+      </div>
+      <div style='display:inline-block;padding-left:0.3em;'>RZ:</div>
+      <div style='display:inline-block; width:1.5em;'id='az'>0</div>
+      <div style='display:inline-block;'>
+        <select id='dz'>
+          <option>-2<option>-1<option selected="selected">0<option>+1<option>+2
+        </select>
+      </div>
+	  
+    </p>
+    <p>Click on the animation to start and stop it.</p>
+
+	<p id="dark">Select mode</p>
+	<button onclick="myFunction1()">No Axis</button>
+	<button onclick="myFunction2()">Axis</button>
+	
+	<script> 
+	function myFunction1() {
+		//document.getElementById("dark").innerHTML = "Points selected";
+		dark=1;
+	}
+	function myFunction2() {
+		//document.getElementById("dark").innerHTML = "Lines selected";
+		dark=0;
+	}
+	</script>
+  </body>
+</html>
+
